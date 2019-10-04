@@ -1,0 +1,60 @@
+body {
+  background: url("../img/preview/desk1.jpg") center top no-repeat;
+  opacity: 0.6;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto_regular.woff") format("woff"),
+    url("../fonts/roboto_regular.woff2") format("woff2"),
+    local("roboto"),
+    local("Roboto");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/roboto_bold.woff") format("woff"),
+    url("../fonts/roboto_bold.woff2") format("woff2"),
+    local("roboto bold"),
+    local("Roboto Bold");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.page-main__registration_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  box-sizing: border-box;
+  margin-left: -100px;
+  margin-top: 24px;
+  padding: 11px;
+  padding-bottom: 13px;
+  color: #ffffff;
+  font-family: "RobotoBold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  background: #558cb7;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.popup-form--hidden {
+  display: none;
+}

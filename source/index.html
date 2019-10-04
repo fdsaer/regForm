@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Рассчетные системы тест</title>
+    <title>Форма регистрации</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-  
+    <main class="page-main">
+      <a class="page-main__registration_button" href="#">Регистрирация</a>
+    </main>
+    
+    <section class="popup-form popup-form--hidden">
+      <h2 class="popup-form__title">Регистрация</h2>
+      <form class="popup-form__form" action="" method="POST">
+        <label class="popup-form__email-label" for="mail">E-mail</label>
+        <input class="popup-form__input-mail" type="email" name="mail" id="mail">
+        <label class="popup-form__nick-label" for="nick">Никнейм</label>
+        <input class="popup-form__input-nick" type="text" name="nick" id="nick">
+        <label class="popup-form__password-label" for="password">Пароль</label>
+        <input class="popup-form__input-password" type="password" name="password" id="password">
+        <p class="popup-form__password-rules">Пароль должен содержать:
+          <span class="popup-form__password-length">от 6 до 32 символов</span>
+          <span class="popup-form__password-numeric">цифру</span>
+          <span class="popup-form__password-case">заглавную и строчную буквы</span>
+          <span class="popup-form__password-coincidence">Пароль не должен совпадать с Никнеймом</span>
+        </p>
+        <label class="popup-form__password-label" for="password">Пароль</label>
+        <input class="popup-form__input-password-again" type="password" name="password-again" id="password-again">
+      </form>
+      <button class="popup-form__close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+    </section>
 
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
