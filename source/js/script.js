@@ -124,7 +124,7 @@
       case 'nick':
         if (fieldToValid.value.length > 0) {
           if (!(fieldToValid.value[0].charCodeAt(0) > 64 && fieldToValid.value[0].charCodeAt(0) < 91 || fieldToValid.value[0].charCodeAt(0) > 96 && fieldToValid.value[0].charCodeAt(0) < 123)) {
-            fieldToValid.setCustomValidity('Никнейм должен начинаться с буквы');
+            fieldToValid.setCustomValidity('Никнейм должен начинаться с буквы латинского алфавита');
           } else if (!(fieldToValid.value.length > 5 && fieldToValid.value.length < 41)) {
             fieldToValid.setCustomValidity('Длина никнейма должна быть от 6 до 40 символов');
           } else if (fieldToValid.validity.patternMismatch) {
@@ -268,13 +268,13 @@
   });
 
   popupForm.addEventListener('submit', function (evt) {
-    formData = new FormData(popupForm);
+    let formData = new FormData(popupForm);
     let dataObject = {};
     evt.preventDefault();
     submitButton.disabled = true;
     submitButton.blur();
-    toggleLinkButton();
     closePopupForm();
+    toggleLinkButton();
     formData.forEach(function(value, key){
       dataObject[key] = value;
     });
