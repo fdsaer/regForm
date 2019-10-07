@@ -7,7 +7,7 @@
 *.psd
 *.sublime*
 node_modules/
-docs/
+
 source/img/preview/
 npm-debug.*
 source/css/*.map
