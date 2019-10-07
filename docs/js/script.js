@@ -125,8 +125,8 @@
         if (fieldToValid.value.length > 0) {
           if (!(fieldToValid.value[0].charCodeAt(0) > 64 && fieldToValid.value[0].charCodeAt(0) < 91 || fieldToValid.value[0].charCodeAt(0) > 96 && fieldToValid.value[0].charCodeAt(0) < 123)) {
             fieldToValid.setCustomValidity('Никнейм должен начинаться с буквы латинского алфавита');
-          } else if (!(fieldToValid.value.length > 5 && fieldToValid.value.length < 41)) {
-            fieldToValid.setCustomValidity('Длина никнейма должна быть от 6 до 40 символов');
+          } else if (!(fieldToValid.value.length > 2 && fieldToValid.value.length < 41)) {
+            fieldToValid.setCustomValidity('Длина никнейма должна быть от 3 до 40 символов');
           } else if (fieldToValid.validity.patternMismatch) {
             fieldToValid.setCustomValidity('Никнейм может содеражть только латинские буквы, цифры и символы ; _');
           } else {
