@@ -18,9 +18,7 @@
 
   function checkValidity() {
     for (let i = 0; i < formInputs.length; i++) {
-      console.log('проверяю' + formInputs[i]);
       if (!formInputs[i].validity.valid) {
-        console.log('невалидное' + formInputs[i]);
         return false;
       }
     }
@@ -62,7 +60,6 @@
   function eraseErrorMessage(rightField) {
     const messageContainer = document.querySelector('.popup-form__input-invalid-message--' + getClass(rightField.className));
     if (messageContainer.textContent) {
-      console.log('Очищаю ' + rightField.className);
       messageContainer.innerText = '';
     }
   }
@@ -152,7 +149,6 @@
         } else if (fieldToValid.value.length > 0 && fieldToValid.value === loginValue) {
           fieldToValid.setCustomValidity('Пароль не должен совпадать с Никнеймом');
         } else if (fieldToValid.value.length > 0 && fieldToValid.value === emailValue) {
-          console.log('совпадает с почтой');
           fieldToValid.setCustomValidity('Пароль не должен совпадать с адресом почты');
         } else {
           fieldToValid.setCustomValidity('');
@@ -169,7 +165,6 @@
         }
         break;
       case 'permission':
-              console.log(fieldToValid.validity);
         if (fieldToValid.validity.valueMissing) {
           fieldToValid.setCustomValidity('Для продолжения необходимо согласиться с условиями');
         } else {
@@ -179,7 +174,6 @@
   }
 
   function onSomeInputChange(evt) {
-    console.log('change' + onceChangedField);
     if (getClass(evt.target.className) === 'password') {
       passwordRulesValidator(evt.target);
     }
@@ -204,7 +198,6 @@
     if (onceChangedField.indexOf(evt.target) === -1) {
       onceChangedField.push(evt.target);
     }
-    console.log('ввод' + onceChangedField);
     for (let i = 0; i < onceChangedField.length; i += 1) {
       fieldValidator(onceChangedField[i]);
       if (!onceChangedField[i].validity.valid) {
@@ -220,7 +213,6 @@
     } else {
       submitButton.disabled = true;
     }
-    //evt.target.addEventListener('input', onSomeInputChange);
   }
 
   for (let i = 0; i < formInputs.length; i += 1) {
