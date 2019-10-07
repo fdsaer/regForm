@@ -1,23 +1,37 @@
 {
-  "name": "regForm",
+  "name": "raschSystem",
   "version": "1.0.0",
   "private": true,
-  "description": "МК Форма регистрации",
+  "description": "Тестовое задание для компании Расчетные системы",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
-    "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x",
     "eslint": "4.19.1",
     "eslint-config-htmlacademy": "0.5.2"
+    "del": "^5.0.0",
+    "gulp": "4.0.x",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-less": "4.0.x",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
+    "posthtml-include": "^1.2.0",
+    "stylelint": "10.1.x",
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint && eslint js/"
+    "test": "npm run editorconfig && npm run stylelint && eslint js/",
+    "build": "gulp build",
+    "start": "gulp start"
   },
-  "license": "MIT",
   "browserslist": [
     "last 2 versions",
     "IE 11",
@@ -28,7 +42,8 @@
     "*.js",
     "source/*.html",
     "source/js/**/*.js",
-    "source/css/**/*.css"
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
   ],
   "engines": {
     "node": "8.16"

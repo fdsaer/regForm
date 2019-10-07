@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <main class="page-main">
       <a class="page-main__registration_button" href="#">Регистрирация</a>
     </main>
-    
+
     <section class="popup-form popup-form--hidden">
       <h2 class="popup-form__title">Регистрация</h2>
       <form class="popup-form__form" action="" method="POST">
@@ -19,7 +19,7 @@
         <input class="popup-form__input popup-form__input--email" type="email" name="mail" id="mail" required>
         <p class="popup-form__input-invalid-message popup-form__input-invalid-message--email"></p>
         <label class="popup-form__label popup-form__label--nick" for="nick">Никнейм</label>
-        <input class="popup-form__input popup-form__input--nick" type="text" name="nick" id="nick" minlength="3" maxlength="10" pattern="[A-Za-z][A-Za-z0-9;_]*" required>
+        <input class="popup-form__input popup-form__input--nick" type="text" name="nick" id="nick" minlength="3" maxlength="40" pattern="[A-Za-z][A-Za-z0-9;_]*" required>
         <p class="popup-form__input-invalid-message popup-form__input-invalid-message--nick"></p>
         <label class="popup-form__label popup-form__label--password" for="password">Пароль</label>
         <input class="popup-form__input popup-form__input--password" type="password" name="password" id="password" required>
@@ -29,10 +29,10 @@
           <span class="popup-form__password-rules popup-form__password-rules--case">заглавную и строчную буквы</span>
         </p>
         <p class="popup-form__input-invalid-message popup-form__input-invalid-message--password"></p>
-        <label class="popup-form__label popup-form__label--password-again" for="password-again">Пароль ещё раз</label>
+        <label class="popup-form__label popup-form__label--password-again" for="passwordAgain">Пароль ещё раз</label>
         <input class="popup-form__input popup-form__input--password-again" type="password" name="passwordAgain" id="passwordAgain" required>
         <p class="popup-form__input-invalid-message popup-form__input-invalid-message--password-again"></p>
-        <input class="popup-form__checkbox popup-form__checkbox--permission" type="checkbox" name="permission" id="permission" required>
+        <input class="popup-form__checkbox popup-form__checkbox--permission visually-hidden" type="checkbox" name="permission" id="permission" required>
         <p class="popup-form__checkbox-subscription"><label for="permission">Я принимаю условия</label> <a href="#">Пользовательского соглашения</a></p>
         <p class="popup-form__input-invalid-message popup-form__input-invalid-message--permission"></p>
         <button class="popup-form__submit-button" type="submit" disabled>Зарегистрироваться</button>
